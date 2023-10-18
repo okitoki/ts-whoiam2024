@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CoverPage from './componunt/cover';
+import { Route, Routes } from 'react-router-dom';
+import CheckList from './componunt/checklist';
+import ResultPage from './componunt/result';
 
-function App() {
+
+
+
+
+const App: React.FC = () => {
+
+
+
+       
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+       
+       <Routes>
+                <Route path="/" element={<CoverPage />}  />
+                <Route path="/page1" element={<CheckList />}  />
+                <Route path="/result" element={<ResultPage />}  />
+       </Routes>
+
   );
 }
 
